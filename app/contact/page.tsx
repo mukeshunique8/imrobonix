@@ -1,8 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable react-hooks/purity */
 "use client"
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { MapPin, Phone, Mail, Send, MessageSquare, User, Building2, Sparkles } from 'lucide-react';
+import { MapPin, Phone, Mail, Send, MessageSquare, User, Building2, Sparkles, LucideIcon } from 'lucide-react';
 import { GlowingLines, GridBackground, Particle } from '@/components/custom/Effects';
 
 // Contact data object
@@ -35,7 +36,7 @@ const contactData = {
 
 
 // Contact info card
-const ContactInfoCard = ({ icon: Icon, title, items, delay }) => {
+const ContactInfoCard = ({ icon: Icon, title, items, delay }: { icon: LucideIcon; title: string; items: string[]; delay: number }) => {
     const [isHovered, setIsHovered] = useState(false);
 
     return (
@@ -100,13 +101,13 @@ const ContactForm = () => {
         message: ''
     });
 
-    const handleSubmit = (e) => {
+    const handleSubmit = (e: { preventDefault: () => void; }) => {
         e.preventDefault();
         console.log('Form submitted:', formData);
         // Handle form submission
     };
 
-    const handleChange = (e) => {
+    const handleChange = (e: { target: { name: any; value: any; }; }) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
@@ -243,7 +244,7 @@ const ContactPage = () => {
                         className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-xl mb-6"
                     >
                         <Sparkles className="w-4 h-4 text-primary" />
-                        <span className="text-sm font-medium text-primary">We're Here to Help</span>
+                        <span className="text-sm font-medium text-primary">We&apos;re Here to Help</span>
                     </motion.div>
 
                     <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">

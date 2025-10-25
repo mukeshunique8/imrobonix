@@ -225,7 +225,7 @@ export const GlowingLines = () => {
     );
 };
 
-export const Particle = ({ delay }) => {
+export const Particle = ({ delay }: { delay: number }) => {
     return (
         <motion.div
             className="absolute w-1 h-1 bg-primary/40 rounded-full"

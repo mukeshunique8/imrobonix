@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable react-hooks/immutability */
 "use client";
 import { cn } from "@/lib/utils";
 import { motion, AnimatePresence } from "motion/react";
@@ -95,7 +97,7 @@ export const ImagesSlider = ({
             opacity: 1,
             transition: {
                 duration: 0.5,
-                ease: [0.645, 0.045, 0.355, 1.0],
+                ease: [0.43, 0.13, 0.23, 0.96],
             },
         },
         upExit: {
@@ -141,7 +143,7 @@ export const ImagesSlider = ({
                         initial="initial"
                         animate="visible"
                         exit={direction === "up" ? "upExit" : "downExit"}
-                        variants={slideVariants}
+                        variants={slideVariants as any}
                         className="image h-full w-full absolute inset-0 object-cover object-center"
                     />
                 </AnimatePresence>
