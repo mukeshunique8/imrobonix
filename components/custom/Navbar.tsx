@@ -10,6 +10,8 @@ import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import Image from "next/image";
 import { useTheme } from "next-themes";
+import Link from "next/link"; // ✅ ADD THIS
+import { usePathname } from "next/navigation"; // ✅ ADD THIS
 
 // Nav Config
 const navConfig = {
@@ -36,7 +38,6 @@ const navConfig = {
                     href: "/products",
                     image: "/images/Cheribot.png",
                 },
-
             ],
         },
         { name: "Team", href: "/team" },
@@ -46,8 +47,7 @@ const navConfig = {
     ],
 };
 
-
-// Desktop Product Dropdown - Fixed to show outside navbar
+// Desktop Product Dropdown
 const ProductDropdown = ({ items, isOpen }: { items: any[]; isOpen: boolean }) => {
     return (
         <AnimatePresence>
@@ -65,40 +65,40 @@ const ProductDropdown = ({ items, isOpen }: { items: any[]; isOpen: boolean }) =
 
                         <div className="relative grid grid-cols-2 gap-4 p-6">
                             {items.map((item, idx) => (
-                                <motion.a
-                                    key={item.title}
-                                    href={item.href}
-                                    initial={{ opacity: 0, x: -20 }}
-                                    animate={{ opacity: 1, x: 0 }}
-                                    transition={{ delay: idx * 0.05 }}
-                                    whileHover={{ scale: 1.02 }}
-                                    className="group relative rounded-xl p-4 border border-primary/10 overflow-hidden"
-                                >
+                                <Link key={item.title} href={item.href}> {/* ✅ CHANGED */}
                                     <motion.div
-                                        className="absolute inset-0 bg-primary/5"
-                                        initial={{ scale: 0, opacity: 0 }}
-                                        whileHover={{ scale: 1, opacity: 1 }}
-                                        transition={{ duration: 0.3 }}
-                                    />
+                                        initial={{ opacity: 0, x: -20 }}
+                                        animate={{ opacity: 1, x: 0 }}
+                                        transition={{ delay: idx * 0.05 }}
+                                        whileHover={{ scale: 1.02 }}
+                                        className="group relative rounded-xl p-4 border border-primary/10 overflow-hidden cursor-pointer"
+                                    >
+                                        <motion.div
+                                            className="absolute inset-0 bg-primary/5"
+                                            initial={{ scale: 0, opacity: 0 }}
+                                            whileHover={{ scale: 1, opacity: 1 }}
+                                            transition={{ duration: 0.3 }}
+                                        />
 
-                                    <div className="relative flex gap-4">
-                                        <div className="w-20 h-20 rounded-lg overflow-hidden shrink-0 border border-primary/20">
-                                            <img
-                                                src={item.image}
-                                                alt={item.title}
-                                                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
-                                            />
+                                        <div className="relative flex gap-4">
+                                            <div className="w-20 h-20 rounded-lg overflow-hidden shrink-0 border border-primary/20">
+                                                <img
+                                                    src={item.image}
+                                                    alt={item.title}
+                                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                                                />
+                                            </div>
+                                            <div className="flex-1 min-w-0">
+                                                <h4 className="font-semibold text-sm mb-1 text-primary group-hover:text-primary/80 transition-colors">
+                                                    {item.title}
+                                                </h4>
+                                                <p className="text-xs text-muted-foreground line-clamp-2">
+                                                    {item.description}
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div className="flex-1 min-w-0">
-                                            <h4 className="font-semibold text-sm mb-1 text-primary group-hover:text-primary/80 transition-colors">
-                                                {item.title}
-                                            </h4>
-                                            <p className="text-xs text-muted-foreground line-clamp-2">
-                                                {item.description}
-                                            </p>
-                                        </div>
-                                    </div>
-                                </motion.a>
+                                    </motion.div>
+                                </Link>
                             ))}
                         </div>
                     </div>
@@ -110,18 +110,16 @@ const ProductDropdown = ({ items, isOpen }: { items: any[]; isOpen: boolean }) =
 
 export function LandingNavbar() {
     const { theme, setTheme } = useTheme();
+    const pathname = usePathname(); // ✅ CHANGED
     const [mobileOpen, setMobileOpen] = useState(false);
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
     const [scrolled, setScrolled] = useState(false);
-    const [currentPath, setCurrentPath] = useState("/");
     const [mounted, setMounted] = useState(false);
 
-    // Prevent hydration mismatch
     useEffect(() => {
         setMounted(true);
     }, []);
 
-    // Track scroll
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 20);
@@ -130,12 +128,7 @@ export function LandingNavbar() {
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
-    // Track current path
-    useEffect(() => {
-        setCurrentPath(window.location.pathname);
-    }, []);
-
-    const isActive = (href: string) => currentPath === href;
+    const isActive = (href: string) => pathname === href; // ✅ CHANGED
 
     const toggleTheme = () => {
         setTheme(theme === "dark" ? "light" : "dark");
@@ -155,7 +148,6 @@ export function LandingNavbar() {
                     }`}
             >
                 <div className="relative">
-                    {/* Glow effect */}
                     <motion.div
                         animate={{
                             opacity: scrolled ? [0.3, 0.6, 0.3] : [0.2, 0.4, 0.2],
@@ -165,8 +157,6 @@ export function LandingNavbar() {
                     />
 
                     <div className="relative bg-background/80 backdrop-blur-xl border border-primary/20 rounded-2xl shadow-2xl">
-
-                        {/* Top glow line */}
                         <motion.div
                             className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent"
                             animate={{ opacity: [0.3, 1, 0.3] }}
@@ -175,21 +165,21 @@ export function LandingNavbar() {
 
                         <div className="relative flex items-center justify-between px-3 py-1">
                             {/* Logo */}
-                            <motion.a
-                                href="/"
-                                whileHover={{ scale: 1.05 }}
-                                className="relative group"
-                            >
-
-                                <Image
-                                    src={navConfig.logo.src}
-                                    alt={navConfig.logo.alt}
-                                    width={60}
-                                    height={60}
-                                    className=""
-                                    priority
-                                />
-                            </motion.a>
+                            <Link href="/"> {/* ✅ CHANGED */}
+                                <motion.div
+                                    whileHover={{ scale: 1.05 }}
+                                    className="relative group cursor-pointer"
+                                >
+                                    <Image
+                                        src={navConfig.logo.src}
+                                        alt={navConfig.logo.alt}
+                                        width={60}
+                                        height={60}
+                                        className=""
+                                        priority
+                                    />
+                                </motion.div>
+                            </Link>
 
                             {/* Desktop Links */}
                             <div className="hidden lg:flex items-center gap-1">
@@ -200,32 +190,33 @@ export function LandingNavbar() {
                                         onMouseEnter={() => link.submenu && setActiveDropdown(link.name)}
                                         onMouseLeave={() => setActiveDropdown(null)}
                                     >
-                                        <motion.a
-                                            href={link.href}
-                                            whileHover={{ scale: 1.05 }}
-                                            whileTap={{ scale: 0.95 }}
-                                            className={`relative px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1 ${isActive(link.href)
-                                                ? "text-primary"
-                                                : "text-foreground hover:text-primary"
-                                                }`}
-                                        >
-                                            {isActive(link.href) && (
-                                                <motion.div
-                                                    layoutId="activeLink"
-                                                    className="absolute inset-0 bg-primary/10 rounded-lg"
-                                                    transition={{ type: "spring", stiffness: 300, damping: 30 }}
-                                                />
-                                            )}
-                                            <span className="relative z-10">{link.name}</span>
-                                            {link.submenu && (
-                                                <motion.div
-                                                    animate={{ rotate: activeDropdown === link.name ? 180 : 0 }}
-                                                    transition={{ duration: 0.2 }}
-                                                >
-                                                    <ChevronDown className="w-3 h-3" />
-                                                </motion.div>
-                                            )}
-                                        </motion.a>
+                                        <Link href={link.href}> {/* ✅ CHANGED */}
+                                            <motion.div
+                                                whileHover={{ scale: 1.05 }}
+                                                whileTap={{ scale: 0.95 }}
+                                                className={`relative px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1 cursor-pointer ${isActive(link.href)
+                                                    ? "text-primary"
+                                                    : "text-foreground hover:text-primary"
+                                                    }`}
+                                            >
+                                                {isActive(link.href) && (
+                                                    <motion.div
+                                                        layoutId="activeLink"
+                                                        className="absolute inset-0 bg-primary/10 rounded-lg"
+                                                        transition={{ type: "spring", stiffness: 300, damping: 30 }}
+                                                    />
+                                                )}
+                                                <span className="relative z-10">{link.name}</span>
+                                                {link.submenu && (
+                                                    <motion.div
+                                                        animate={{ rotate: activeDropdown === link.name ? 180 : 0 }}
+                                                        transition={{ duration: 0.2 }}
+                                                    >
+                                                        <ChevronDown className="w-3 h-3" />
+                                                    </motion.div>
+                                                )}
+                                            </motion.div>
+                                        </Link>
 
                                         {link.submenu && (
                                             <ProductDropdown
@@ -239,18 +230,13 @@ export function LandingNavbar() {
 
                             {/* Theme Toggle + Mobile Menu */}
                             <div className="flex items-center gap-4">
-                                {/* Theme Toggle */}
-                                <motion.div
-                                    whileHover={{ scale: 1.05 }}
-                                    className=""
-                                >
+                                <motion.div whileHover={{ scale: 1.05 }} className="">
                                     <Switch
                                         checked={theme === "dark"}
                                         onCheckedChange={toggleTheme}
                                     />
                                 </motion.div>
 
-                                {/* Mobile Menu Button */}
                                 <Button
                                     variant="outline"
                                     size="icon"
@@ -289,7 +275,6 @@ export function LandingNavbar() {
             <AnimatePresence>
                 {mobileOpen && (
                     <>
-                        {/* Backdrop */}
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
@@ -298,7 +283,6 @@ export function LandingNavbar() {
                             className="fixed inset-0 bg-background/80 backdrop-blur-sm z-40 lg:hidden"
                         />
 
-                        {/* Mobile Menu Panel */}
                         <motion.div
                             initial={{ x: "100%" }}
                             animate={{ x: 0 }}
@@ -310,7 +294,6 @@ export function LandingNavbar() {
                                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none" />
 
                                 <div className="relative p-6 space-y-6">
-                                    {/* Mobile Header */}
                                     <div className="flex items-center justify-between pb-6 border-b border-primary/20">
                                         <Image
                                             src={navConfig.logo.src}
@@ -330,18 +313,7 @@ export function LandingNavbar() {
                                         </Button>
                                     </div>
 
-                                    {/* Mobile Theme Toggle */}
-                                    <div className="flex items-center justify-between p-4 rounded-lg bg-secondary/50 border border-primary/10">
-                                        <span className="text-sm font-medium">Theme</span>
-                                        <div className="flex items-center gap-2">
-                                            <Sun className="h-4 w-4 text-yellow-500" />
-                                            <Switch
-                                                checked={theme === "dark"}
-                                                onCheckedChange={toggleTheme}
-                                            />
-                                            <Moon className="h-4 w-4 text-blue-400" />
-                                        </div>
-                                    </div>
+
 
                                     {/* Mobile Links */}
                                     <nav className="space-y-2">
@@ -384,19 +356,18 @@ export function LandingNavbar() {
                                                                     className="overflow-hidden"
                                                                 >
                                                                     <div className="pl-4 pt-2 space-y-2">
-                                                                        {link.submenu.map((item) => (
-                                                                            <a
-                                                                                key={item.title}
-                                                                                href={item.href}
-                                                                                className="block p-3 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-colors"
-                                                                            >
-                                                                                <div className="font-medium text-sm text-primary">
-                                                                                    {item.title}
+                                                                        {link.submenu.map((item, itemIndex) => (
+                                                                            <Link key={item.title} href={item.href}>
+                                                                                <div className={`block p-3 rounded-lg bg-secondary/30 hover:bg-secondary/50 transition-colors cursor-pointer ${itemIndex % 2 !== 0 ? 'mt-2 md:mt-0' : ''
+                                                                                    }`}>
+                                                                                    <div className="font-medium text-sm text-primary">
+                                                                                        {item.title}
+                                                                                    </div>
+                                                                                    <div className="text-xs text-muted-foreground mt-1">
+                                                                                        {item.description}
+                                                                                    </div>
                                                                                 </div>
-                                                                                <div className="text-xs text-muted-foreground mt-1">
-                                                                                    {item.description}
-                                                                                </div>
-                                                                            </a>
+                                                                            </Link>
                                                                         ))}
                                                                     </div>
                                                                 </motion.div>
@@ -404,15 +375,16 @@ export function LandingNavbar() {
                                                         </AnimatePresence>
                                                     </div>
                                                 ) : (
-                                                    <a
-                                                        href={link.href}
-                                                        className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors ${isActive(link.href)
-                                                            ? "bg-primary/10 text-primary"
-                                                            : "hover:bg-secondary/50"
-                                                            }`}
-                                                    >
-                                                        {link.name}
-                                                    </a>
+                                                    <Link href={link.href}> {/* ✅ CHANGED */}
+                                                        <div
+                                                            className={`block px-4 py-3 rounded-lg text-sm font-medium transition-colors cursor-pointer ${isActive(link.href)
+                                                                ? "bg-primary/10 text-primary"
+                                                                : "hover:bg-secondary/50"
+                                                                }`}
+                                                        >
+                                                            {link.name}
+                                                        </div>
+                                                    </Link>
                                                 )}
                                             </motion.div>
                                         ))}

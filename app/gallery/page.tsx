@@ -56,6 +56,16 @@ const sectionFourCards = [
 
 
 export default function page() {
+    const galleryImages = [
+        "/images/gallery/galleryhero.png",
+        "/images/interngrpwm.png",
+        "/images/ptr1.png",
+        "/images/sut3.png",
+    ];
+    const data = {
+        title1: "Imrobonix Innovations in Focus",
+        title2: "Exploring the Future"
+    }
     return (
         <div className="relative min-h-screen   bg-background text-foreground overflow-hidden">
             <GridBackground />
@@ -65,7 +75,8 @@ export default function page() {
                 ))}
             </div>
             <div className="relative z-10  mx-auto ">
-                <HeroImage />
+                <HeroImage images={galleryImages} data={data} />
+
                 <div className="flex flex-col mb-[100px] gap-[100px]">
                     <GallerySection data={sectionOneData} cards={sectionOneCards} />
                     <GallerySection data={sectionTwoData} cards={sectionTwoCards} />
