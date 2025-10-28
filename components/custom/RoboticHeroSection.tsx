@@ -91,7 +91,7 @@ export default function RoboticHeroSection() {
 
                 {/* Video Overlay */}
                 {!isFullscreen &&
-                    <div className="absolute inset-0 bg-linear-to-b from-background/80 via-background/60 to-background/90" />
+                    <div className="absolute inset-0 bg-linear-to-b from-background/40 via-background/30 to-background/50" />
                 }
             </div>
 
@@ -115,7 +115,7 @@ export default function RoboticHeroSection() {
             /> */}
 
             {/* Content Container */}
-            {!isFullscreen && <div className="relative z-20 h-full flex items-center justify-center px-4 pt-20 pb-32">
+            {!isFullscreen && <div className="relative z-20 lg:min-h-screen flex items-center justify-center px-4 pt-20 pb-32">
                 <div className="max-w-5xl mx-auto text-center">
                     {/* Animated Badge */}
                     {/* Animated Badge */}
@@ -140,7 +140,7 @@ export default function RoboticHeroSection() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold mb-4 md:mb-6 leading-tight"
+                        className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight"
                     >
                         <span className="block mb-2">
                             <motion.span
@@ -178,7 +178,7 @@ export default function RoboticHeroSection() {
                     </motion.p>
 
                     {/* CTA Buttons */}
-                    <motion.div
+                    {/* <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.6 }}
@@ -208,10 +208,10 @@ export default function RoboticHeroSection() {
                                 Watch Demo
                             </Button>
                         </motion.div>
-                    </motion.div>
+                    </motion.div> */}
 
                     {/* Floating Stats */}
-                    <motion.div
+                    {/* <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.8 }}
@@ -245,7 +245,7 @@ export default function RoboticHeroSection() {
                                 </div>
                             </motion.div>
                         ))}
-                    </motion.div>
+                    </motion.div> */}
                 </div>
             </div>}
 
@@ -264,7 +264,7 @@ export default function RoboticHeroSection() {
                 animate={{ opacity: 1, y: [0, 10, 0] }}
                 transition={{ opacity: { delay: 1.5 }, y: { duration: 2, repeat: Infinity } }}
                 onClick={handleScrollDown}
-                className="absolute bottom-3 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
+                className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 text-muted-foreground hover:text-primary transition-colors"
             >
                 <span className="text-xs font-medium">Scroll to explore</span>
                 <ChevronDown className="w-5 h-5" />

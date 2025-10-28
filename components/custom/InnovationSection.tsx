@@ -112,7 +112,7 @@ export default function InnovationSection() {
                         </motion.div>
 
                         {/* Description */}
-                        <motion.div variants={itemVariants} className="space-y-4">
+                        {/* <motion.div variants={itemVariants} className="space-y-4">
                             <div className="relative pl-6 border-l-2 border-primary/20">
                                 <motion.div
                                     className="absolute left-0 top-0 w-0.5 h-full bg-primary origin-top"
@@ -138,7 +138,7 @@ export default function InnovationSection() {
                                     <strong className="text-primary">CheriBot</strong>, a smart robotic bionic upper limb, offers high grasping capability, allowing amputees to mimic human hand movements with 15 degrees of freedom. Utilizing camera vision, it adapts to various contours for enhanced control and functionality.
                                 </p>
                             </div>
-                        </motion.div>
+                        </motion.div> */}
 
                         {/* CTA Buttons */}
                         <motion.div

@@ -2,7 +2,6 @@
 /* eslint-disable react-hooks/purity */
 "use client";
 
-import React from "react";
 import { motion } from "framer-motion";
 import {
     Zap,
@@ -21,26 +20,17 @@ import {
 import Image from "next/image";
 import { GridBackground, SectionParticles } from "@/components/custom/Effects";
 
-interface ProHero {
-    title: string,
-    subtitle: string,
-    description: string,
-    image: string,
-    icon: string,
-}
-// Particle Background
-
 
 
 // Product Hero Section
-const ProductHero = ({ title, subtitle, description, image, icon: Icon }: any) => {
+const ProductHero = ({ title, subtitle, tagline, description, image, icon: Icon }: any) => {
     return (
-        <div className="relative py-20 md:py-32 overflow-hidden">
+        <div className="relative py-20  overflow-hidden">
             <SectionParticles />
             <GridBackground />
 
             <div className="container mx-auto px-4 md:px-6 lg:px-8 relative z-10">
-                <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
                     {/* Content */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
@@ -78,6 +68,15 @@ const ProductHero = ({ title, subtitle, description, image, icon: Icon }: any) =
                                         {title}
                                     </span>
                                 </motion.h1>
+                                <motion.h2
+                                    initial={{ opacity: 0, y: 20 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    viewport={{ once: true }}
+                                    transition={{ delay: 0.1 }}
+                                    className="text-xl md:text-2xl text-muted-foreground mb-4"
+                                >
+                                    {tagline}
+                                </motion.h2>
                                 <motion.h2
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
@@ -151,7 +150,7 @@ const FeaturesSection = ({ title, features, image }: any) => {
                     </span>
                 </motion.h2>
 
-                <div className="grid lg:grid-cols-2 gap-12 items-center">
+                <div className="grid lg:grid-cols-2 gap-12 items-start">
                     {/* Features List */}
                     <div className="space-y-4">
                         {features.map((feature: string, idx: number) => (
@@ -223,7 +222,7 @@ const BestWorksSection = ({ title, works }: any) => {
                     viewport={{ once: true }}
                     className="text-3xl md:text-4xl font-bold text-center mb-16"
                 >
-                    <span className="bg-linear-to-r from-primary to-primary/60 bg-clip-text text-transparent">
+                    <span className="bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
                         {title}
                     </span>
                 </motion.h2>
@@ -236,14 +235,10 @@ const BestWorksSection = ({ title, works }: any) => {
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
                             transition={{ delay: idx * 0.1 }}
-                            whileHover={{ scale: 1.02, y: -5 }}
-                            className="relative group"
+                            whileHover={{ y: -5 }}
+                            className="relative cursor-pointer group h-full"
                         >
-                            <motion.div
-                                className="absolute -inset-1 bg-linear-to-r from-primary/50 to-primary/30 rounded-2xl opacity-0 group-hover:opacity-100 blur-sm"
-                                transition={{ duration: 0.3 }}
-                            />
-                            <div className="relative bg-background/80 backdrop-blur-xl border border-primary/20 rounded-2xl p-6 shadow-xl">
+                            <div className="relative bg-background/80 backdrop-blur-xl border border-primary/20 group-hover:border-primary/40 rounded-2xl p-6 shadow-xl transition-colors h-full flex flex-col">
                                 <div className="flex items-start gap-4 mb-4">
                                     <motion.div
                                         whileHover={{ rotate: 360 }}
@@ -256,7 +251,7 @@ const BestWorksSection = ({ title, works }: any) => {
                                         {work.title}
                                     </h3>
                                 </div>
-                                <p className="text-muted-foreground leading-relaxed">
+                                <p className="text-muted-foreground leading-relaxed flex-grow">
                                     {work.description}
                                 </p>
                             </div>
@@ -299,15 +294,15 @@ const ImpactSection = ({ title, impacts }: any) => {
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: idx * 0.15 }}
-                                whileHover={{ scale: 1.05 }}
-                                className="relative group"
+                                whileHover={{ scale: 1.05, y: -5 }}
+                                transition={{ duration: 0.3, ease: "easeInOut" }}
+                                className="relative group h-full"
                             >
                                 <motion.div
                                     className="absolute inset-0 bg-primary/20 blur-2xl rounded-2xl"
                                     whileHover={{ scale: 1.1 }}
                                 />
-                                <div className="relative bg-background/90 backdrop-blur-xl border border-primary/20 rounded-2xl p-6 shadow-xl">
+                                <div className="relative bg-background/90 backdrop-blur-xl border border-primary/20 rounded-2xl p-6 shadow-xl h-full flex flex-col">
                                     <div className="flex flex-col items-center text-center mb-6">
                                         <motion.div
                                             whileHover={{ rotate: 360 }}
@@ -349,6 +344,7 @@ const ImpactSection = ({ title, impacts }: any) => {
 export default function ProductsPage() {
     const surgiKotData = {
         title: "SURGIKOT",
+        tagline: "Surgeries Made Seamless",
         subtitle: "India's First High Precision Robotic Hand-held Medical Device",
         description: "Dr. Palani, a famous surgeon from Tamil Nadu, India drew to our attention a real-world problem that served as the fuel to our innovation. After rigorous analysis and detailed discussion with experts, our team created a multipurpose, high-precision, bio-medical device that aims to be the first robotic surgical tool controlled by the thumb with characteristics similar to the human hand.",
         image: "/images/Surgikot2.png",
@@ -412,6 +408,7 @@ export default function ProductsPage() {
 
     const cheriBotData = {
         title: "CHERI-BOT",
+        tagline: "Empowering Lives with AI",
         subtitle: "India's First AI Vision Enabled Bionic Upper Limb",
         description: "A lightweight, high grasping, smart robotic bionic upper limb. Amputees can grab any contour using camera vision replicating the exact human hand with 15 degrees of freedom.",
         image: "/images/Cheri3.png",
@@ -479,7 +476,7 @@ export default function ProductsPage() {
             <GridBackground />
 
             {/* Page Header */}
-            <div className="relative py-16 border-b border-primary/20">
+            <div className="relative py-16">
                 <div className="container mx-auto px-4 md:px-6 lg:px-8 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}

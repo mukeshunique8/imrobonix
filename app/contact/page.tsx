@@ -5,6 +5,8 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Phone, Mail, Send, MessageSquare, User, Building2, Sparkles, LucideIcon } from 'lucide-react';
 import { GlowingLines, GridBackground, Particle } from '@/components/custom/Effects';
+import animationData from "../../public/json/Live chatbot.json"; // adjust path
+import Lottie from "lottie-react";
 
 // Contact data object
 const contactData = {
@@ -219,7 +221,7 @@ const ContactPage = () => {
         <div className="relative min-h-screen pt-20 md:pt-4  bg-background text-foreground overflow-hidden">
             {/* Background effects */}
             <GridBackground />
-            <GlowingLines />
+            {/* <GlowingLines /> */}
 
             {/* Floating particles */}
             <div className="absolute inset-0 pointer-events-none">
@@ -264,7 +266,7 @@ const ContactPage = () => {
                 </motion.div>
 
                 {/* Contact Info Cards */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+                {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
                     <ContactInfoCard
                         icon={MapPin}
                         title={contactData.office.title}
@@ -283,10 +285,27 @@ const ContactPage = () => {
                         items={contactData.email.emails}
                         delay={0.4}
                     />
-                </div>
+                </div> */}
 
-                {/* Form and Map Section */}
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                {/* Form and Animation Section */}
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+                    {/* Lottie Animation Placeholder */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.4 }}
+                        className="flex justify-center items-center h-full w-full"
+                    >
+                        {/* Replace this div with your Lottie component later */}
+                        <div className="w-full relative  h-full   flex items-center justify-center">
+                            <Lottie
+                                animationData={animationData}
+                                loop
+                                autoplay
+                                className="absolute inset-0 w-full h-full object-cover"
+                            />
+                        </div>
+                    </motion.div>
                     {/* Form */}
                     <div>
                         <motion.div
@@ -308,43 +327,30 @@ const ContactPage = () => {
                         <ContactForm />
                     </div>
 
-                    {/* Map */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ delay: 0.5 }}
-                        className="relative"
-                    >
-                        <div className="flex items-center gap-4 mb-6">
-                            <div className="w-1 h-8 bg-gradient-to-b from-primary to-primary/60 rounded-full" />
-                            <h2 className="text-2xl md:text-3xl font-semibold text-foreground">
-                                {contactData.map.title}
-                            </h2>
-                        </div>
 
-                        <motion.div
-                            whileHover={{ scale: 1.01 }}
-                            className="relative rounded-2xl overflow-hidden border border-primary/20 shadow-2xl h-[500px] backdrop-blur-xl bg-background/95"
-                        >
-                            {/* Corner accents */}
-                            <div className="absolute top-4 left-4 w-12 h-12 border-l-2 border-t-2 border-primary/60 rounded-tl-2xl pointer-events-none z-10" />
-                            <div className="absolute top-4 right-4 w-12 h-12 border-r-2 border-t-2 border-primary/60 rounded-tr-2xl pointer-events-none z-10" />
-                            <div className="absolute bottom-4 left-4 w-12 h-12 border-l-2 border-b-2 border-primary/60 rounded-bl-2xl pointer-events-none z-10" />
-                            <div className="absolute bottom-4 right-4 w-12 h-12 border-r-2 border-b-2 border-primary/60 rounded-br-2xl pointer-events-none z-10" />
-
-                            <iframe
-                                src={contactData.map.embedUrl}
-                                width="100%"
-                                height="100%"
-                                style={{ border: 0 }}
-                                allowFullScreen
-                                loading="lazy"
-                                referrerPolicy="no-referrer-when-downgrade"
-                                className="w-full h-full"
-                            />
-                        </motion.div>
-                    </motion.div>
                 </div>
+
+                {/* Full-Width Map Section */}
+                <section className="mt-12">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.5 }}
+                        className="relative w-full rounded-2xl overflow-hidden border border-primary/20 shadow-xl"
+                    >
+                        <iframe
+                            src={contactData.map.embedUrl}
+                            width="100%"
+                            height="500"
+                            style={{ border: 0 }}
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            className="w-full h-[400px] md:h-[500px]"
+                        />
+                    </motion.div>
+                </section>
+
             </div>
         </div>
     );

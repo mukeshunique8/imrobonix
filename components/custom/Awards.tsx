@@ -114,14 +114,14 @@ const AwardCard = ({ award, index }: { award: Award; index: number }) => {
         >
             {/* Image Section */}
             <motion.div
-                className="relative w-full md:w-1/2 aspect-[4/3] rounded-3xl overflow-hidden"
+                className="relative w-full md:w-1/2 h-auto aspect-[4/3] rounded-3xl overflow-hidden"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.4 }}
             >
-                <div className="relative w-full h-full backdrop-blur-xl bg-background/95   shadow-2xl">
+                <div className="relative w-full h-full   shadow-2xl">
                     {/* Animated gradient overlay */}
                     <motion.div
-                        className="absolute inset-0 bg-gradient-to-br from-primary/20 via-primary/10 to-secondary/20 pointer-events-none z-10"
+                        className="absolute inset-0  pointer-events-none z-10"
                         animate={{
                             opacity: isHovered ? [0.3, 0.6, 0.3] : 0.2,
                         }}
@@ -137,6 +137,7 @@ const AwardCard = ({ award, index }: { award: Award; index: number }) => {
                             src={award.image}
                             alt={award.title}
                             fill
+                            className="object-contain"
                             sizes="(max-width: 768px) 100vw, 50vw"
                             priority={index < 2} // Prioritize first 2 images
                         />

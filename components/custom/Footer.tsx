@@ -298,7 +298,7 @@ export default function Footerdemo() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: 0.5 }}
-                    className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-primary/10 pt-8 text-center md:flex-row"
+                    className="flex flex-col items-center justify-between gap-4 pt-8 text-center md:flex-row"
                 >
                     <p className="text-sm text-muted-foreground">
                         © 2025 Imrobonix Pvt Ltd. All rights reserved.
@@ -322,9 +322,9 @@ export default function Footerdemo() {
                     </nav>
                 </motion.div>
             </div>
-            <div className=" w-full flex mt-4 items-center justify-center   ">
-                <h1 className="text-center text-3xl md:text-5xl lg:text-[10rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-700 to-neutral-900 select-none">
-                    <span className="text-primary">IM</span><span className="text-secondary">robonix</span>
+            <div className="absolute bottom-0 left-0 right-0 w-full flex items-center justify-center pointer-events-none">
+                <h1 className="text-center text-3xl md:text-5xl lg:text-[10rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-700/20 to-neutral-900/10 select-none">
+                    <span className="text-primary/20">IM</span><span className="text-secondary/20">robonix</span>
                 </h1>
             </div>
 

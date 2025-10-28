@@ -26,7 +26,7 @@ import { InfiniteSlider } from "@/components/motion-primitives/infinite-slider";
 // Hero Section
 const HeroSection = () => {
     return (
-        <div className="relative py-20 md:py-32 overflow-hidden">
+        <div className="relative pt-20 md:pt-32 overflow-hidden">
             <SectionParticles />
             <GridBackground />
 
@@ -412,7 +412,7 @@ const TestimonialsSection = () => {
                     {testimonials.map((testimonial, idx) => (
                         <motion.div
                             key={idx}
-                            whileHover={{ scale: 1.04 }}
+                            // whileHover={{ scale: 1.01 }}
                             transition={{ type: "spring", stiffness: 300, damping: 20 }}
                             className="relative  w-[400px] h-[280px] flex-shrink-0 cursor-pointer"
                         >

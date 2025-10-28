@@ -69,7 +69,7 @@ export const VideoControls = ({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 1 }}
-            className="absolute bottom-14 left-1/2 -translate-x-1/2 z-30 "
+            className="absolute bottom-24 left-1/2 -translate-x-1/2 z-30 "
         >
             <div className="flex items-center gap-3 px-6 py-3 rounded-full bg-background/80 backdrop-blur-xl border border-primary/20 shadow-2xl">
                 <motion.div

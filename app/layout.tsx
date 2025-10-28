@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Orbitron, Roboto, Poppins } from "next/font/google";
+import { Orbitron, Roboto, Poppins, Exo_2, Audiowide, Teko, Titillium_Web, Russo_One, Barlow_Condensed, Chakra_Petch, Michroma } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import { LandingNavbar } from "@/components/custom/Navbar";
 import Footerdemo from "@/components/custom/Footer";
 import { LoadingProvider } from "./contexts/LoadingContext";
+import { Rajdhani } from "next/font/google";
 
 export const metadata: Metadata = {
   title: {
@@ -86,8 +87,6 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: "/favicon.ico" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
     ],
     apple: [
       { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
@@ -128,6 +127,76 @@ export const poppins = Poppins({
   weight: ["300", "400", "500", "600", "700"],
   display: "swap",
 });
+
+// export const orbitron = Orbitron({
+//   subsets: ["latin"],
+//   variable: "--font-orbitron",
+//   display: "swap",
+// });
+
+export const rajdhani = Rajdhani({
+  subsets: ["latin"],
+  variable: "--font-orbitron",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+export const exo2 = Exo_2({
+  subsets: ["latin"],
+  variable: "--font-orbitron",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+export const audiowide = Audiowide({
+  subsets: ["latin"],
+  variable: "--font-orbitron",
+  weight: ["400"],
+  display: "swap",
+});
+
+export const teko = Teko({
+  subsets: ["latin"],
+  variable: "--font-orbitron",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+export const titillium = Titillium_Web({
+  subsets: ["latin"],
+  variable: "--font-orbitron",
+  weight: ["400", "600", "700"],
+  display: "swap",
+});
+
+export const russo = Russo_One({
+  subsets: ["latin"],
+  variable: "--font-orbitron",
+  weight: ["400"],
+  display: "swap",
+});
+
+export const barlow = Barlow_Condensed({
+  subsets: ["latin"],
+  variable: "--font-orbitron",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+export const chakra = Chakra_Petch({
+  subsets: ["latin"],
+  variable: "--font-orbitron",
+  weight: ["400", "500", "600", "700"],
+  display: "swap",
+});
+
+export const michroma = Michroma({
+  subsets: ["latin"],
+  variable: "--font-orbitron",
+  weight: ["400"],
+  display: "swap",
+});
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
@@ -174,10 +243,10 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${orbitron.variable} ${roboto.variable} ${poppins.variable} antialiased`}>
+      <body className={` ${michroma.variable} ${roboto.variable} ${poppins.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="light"
           enableSystem
           disableTransitionOnChange
         >

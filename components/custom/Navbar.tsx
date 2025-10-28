@@ -156,7 +156,7 @@ export function LandingNavbar() {
                         className="absolute -inset-1 bg-gradient-to-r from-primary/30 via-primary/50 to-primary/30 rounded-3xl blur-xl"
                     />
 
-                    <div className="relative bg-background/80 backdrop-blur-xl border border-primary/20 rounded-2xl shadow-2xl">
+                    <div className="relative bg-background/40 backdrop-blur-xl rounded-2xl shadow-2xl">
                         <motion.div
                             className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-primary to-transparent"
                             animate={{ opacity: [0.3, 1, 0.3] }}
@@ -230,13 +230,49 @@ export function LandingNavbar() {
 
                             {/* Theme Toggle + Mobile Menu */}
                             <div className="flex items-center gap-4">
-                                <motion.div whileHover={{ scale: 1.05 }} className="">
+                                {/* <motion.div
+                                    whileHover={{ scale: 1.05 }}
+                                    className="flex items-center gap-2"
+                                >
+                                    <Sun className="h-4 w-4 text-primary" />
+                                    <Switch
+                                        checked={theme === "dark"}
+                                        onCheckedChange={toggleTheme}
+                                    />
+                                    <Moon className="h-4 w-4 text-primary" />
+                                </motion.div> */}
+                                <motion.div
+                                    whileHover={{ scale: 1.05 }}
+                                    className="flex items-center gap-2"
+                                >
+                                    <AnimatePresence mode="wait">
+                                        {theme === "dark" ? (
+                                            <motion.div
+                                                key="moon"
+                                                initial={{ rotate: -90, opacity: 0 }}
+                                                animate={{ rotate: 0, opacity: 1 }}
+                                                exit={{ rotate: 90, opacity: 0 }}
+                                                transition={{ duration: 0.3 }}
+                                            >
+                                                <Moon className="h-4 w-4 text-primary" />
+                                            </motion.div>
+                                        ) : (
+                                            <motion.div
+                                                key="sun"
+                                                initial={{ rotate: -90, opacity: 0 }}
+                                                animate={{ rotate: 0, opacity: 1 }}
+                                                exit={{ rotate: 90, opacity: 0 }}
+                                                transition={{ duration: 0.3 }}
+                                            >
+                                                <Sun className="h-4 w-4 text-primary" />
+                                            </motion.div>
+                                        )}
+                                    </AnimatePresence>
                                     <Switch
                                         checked={theme === "dark"}
                                         onCheckedChange={toggleTheme}
                                     />
                                 </motion.div>
-
                                 <Button
                                     variant="outline"
                                     size="icon"

@@ -16,7 +16,13 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { GridBackground, SectionParticles } from "@/components/custom/Effects";
-
+// Add this helper function after imports
+const calculateYearsOfExperience = (startYear: string) => {
+    if (!startYear) return null;
+    const currentYear = new Date().getFullYear();
+    const years = currentYear - parseInt(startYear);
+    return years;
+};
 // Section Navigation
 const SectionNav = () => {
     const sections = [
@@ -154,10 +160,21 @@ const LargeProfileCard = ({ member, reverse = false }: any) => {
                         viewport={{ once: true }}
                         className={`space-y-6 ${reverse ? 'lg:col-start-1 lg:row-start-1' : ''}`}
                     >
-                        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm">
-                            <span className="text-xs font-medium text-primary uppercase tracking-wide">
-                                {member.role}
-                            </span>
+                        <div className="flex flex-wrap items-center gap-3">
+                            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 backdrop-blur-sm">
+                                <span className="text-xs font-medium text-primary uppercase tracking-wide">
+                                    {member.role}
+                                </span>
+                            </div>
+
+                            {member.yrsExp && (
+                                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-background border-2 border-primary/40 backdrop-blur-sm">
+                                    <Briefcase className="w-3 h-3 text-primary" />
+                                    <span className="text-xs font-semibold text-foreground">
+                                        {calculateYearsOfExperience(member.yrsExp)}+ Years Experience
+                                    </span>
+                                </div>
+                            )}
                         </div>
 
                         <h3 className="text-3xl md:text-4xl font-bold">
@@ -238,14 +255,17 @@ export default function TeamPage() {
             role: "Chief Technology Officer & Co-Founder",
             image: "/images/iyybg.png",
             linkedin: "https://www.linkedin.com/in/iyyappan-madasamy-59374612b/",
-            description: "Mr. Iyyappan completed his Master's in Robotics and Artificial Intelligence from Warsaw University Europe, he had a deep desire and a vision to develop advanced robotic health care products at an affordable cost to benefit the society. He has more than 4 years of experience and a self-paced rigorous Research and Development Engineer. His clear vision paved the way to set-up health based Robotic manufacturing company IMRobonix private limited in Tamil Nadu for making high-tech robotic systems with a wide application.",
+            description: `Mr. Iyyappan completed his Master's in Robotics and Artificial Intelligence from Warsaw University Europe, he had a deep desire and a vision to develop advanced robotic health care products at an affordable cost to benefit the society. He has more than ${calculateYearsOfExperience("2018")} years of experience and a self-paced rigorous Research and Development Engineer. His clear vision paved the way to set-up health based Robotic manufacturing company IMRobonix private limited in Tamil Nadu for making high-tech robotic systems with a wide application.`,
+            yrsExp: "2018"
         },
         {
-            name: "C A. Manickanthan",
-            role: "Director & Co-Founder",
+            name: "MANICKANTHAN C A",
+            role: "COO AND DIRECTOR",
             image: "/images/Manibg.png",
             linkedin: "https://www.linkedin.com/in/manickanthan-c-a-b79a3b193/",
-            description: "Mr. Manickanthan has more than 3 years of experience in Robotics and Automation Industry. He is a technical robot programmer and an Economist. He has experience in programming Bionic arm, industrial robots. Currently, He is serving as the Director of IMROBONIX. He has successfully completed a project based on 'The economic crisis due to constant climatic change' and was awarded as Young Scientist for his exemplary work.",
+            description: `Mr. Manickanthan has more than ${calculateYearsOfExperience("2019")} years of experience in Robotics and Automation Industry. He is a technical robot programmer and an Economist. He has experience in programming Bionic arm, industrial robots. Currently, He is serving as the Director of IMROBONIX. He has successfully completed a project based on 'The economic crisis due to constant climatic change' and was awarded as Young Scientist for his exemplary work.`,
+            yrsExp: "2019"
+
         },
     ];
 
@@ -256,6 +276,8 @@ export default function TeamPage() {
             image: "/images/Anuradhabg.png",
             linkedin: "https://www.linkedin.com/in/dr-anuradha-sunil-18a54a24/",
             description: "Dr. Anuradha Sunil has over 25 years of experience in healthcare across the spectrum. Her Experience includes competitive bidding, strategic planning and implementation of health projects on a large scale. She is a Member of the Royal College of General Practitioners (MRCGP) of the United Kingdom (UK). Currently working with the Govt of Tamil Nadu and then the National Health Services (NHS) in the UK.",
+            yrsExp: ""
+
         },
         {
             name: "Dr. P. Subramanian",
@@ -329,7 +351,7 @@ export default function TeamPage() {
             linkedin: "https://www.linkedin.com/in/iyyappan-madasamy-59374612b/",
         },
         {
-            name: "C A. Manickanthan",
+            name: "MANICKANTHAN C A",
             role: "Research & Robot Programmer",
             image: "/images/Manibg.png",
             linkedin: "https://www.linkedin.com/in/manickanthan-c-a-b79a3b193/",
@@ -360,7 +382,7 @@ export default function TeamPage() {
             <GridBackground />
 
             {/* Hero Section */}
-            <div className="relative py-20 md:py-32">
+            <div className="relative pt-20 md:pt-32">
                 <div className="container mx-auto px-4 md:px-6 lg:px-8 text-center">
                     <motion.div
                         initial={{ opacity: 0, scale: 0 }}
