@@ -261,7 +261,7 @@ export default function TeamPage() {
         {
             name: "MANICKANTHAN C A",
             role: "COO AND DIRECTOR",
-            image: "/images/Manibg.png",
+            image: "/images/team/mani.jpg",
             linkedin: "https://www.linkedin.com/in/manickanthan-c-a-b79a3b193/",
             description: `Mr. Manickanthan has more than ${calculateYearsOfExperience("2019")} years of experience in Robotics and Automation Industry. He is a technical robot programmer and an Economist. He has experience in programming Bionic arm, industrial robots. Currently, He is serving as the Director of IMROBONIX. He has successfully completed a project based on 'The economic crisis due to constant climatic change' and was awarded as Young Scientist for his exemplary work.`,
             yrsExp: "2019"
@@ -273,7 +273,7 @@ export default function TeamPage() {
         {
             name: "Dr. Anuradha Sunil",
             role: "Chief Medical Advisor",
-            image: "/images/Anuradhabg.png",
+            image: "/images/team/Anuradha Sunil.jpg",
             linkedin: "https://www.linkedin.com/in/dr-anuradha-sunil-18a54a24/",
             description: "Dr. Anuradha Sunil has over 25 years of experience in healthcare across the spectrum. Her Experience includes competitive bidding, strategic planning and implementation of health projects on a large scale. She is a Member of the Royal College of General Practitioners (MRCGP) of the United Kingdom (UK). Currently working with the Govt of Tamil Nadu and then the National Health Services (NHS) in the UK.",
             yrsExp: ""
@@ -292,7 +292,7 @@ export default function TeamPage() {
         {
             name: "Dr. Palani Narayanan",
             role: "MS Mch, Urologist (Surgeon & Team Lead)",
-            image: "/images/Icon.png",
+            image: "/images/team/Palani Narayanan.jpg",
             linkedin: "https://www.linkedin.com/in/palani-narayanan-1b06172b/",
             description: "Dr. Palani is a Urologist and has over 8 years of experience. He aims and hopes to expand the use of Minimally Invasive Surgery in resource-constrained settings. He is a well-known surgeon from Tenkasi who presented to us his perspective of difficulty with the then existing medical device to operate laparoscopy surgery. His and along with other surgeon's issue later became our source of initial idea, which led to the creation of our first product Surgi-Kot.",
         },
@@ -330,7 +330,7 @@ export default function TeamPage() {
         {
             name: "Mr. Daniel Christadoss",
             role: "Chief Medical Robot Expert",
-            image: "/images/Danibg.png",
+            image: "/images/team/Daniel.jpg",
             linkedin: "https://www.linkedin.com/in/daniel-christadoss-25441411/",
             description: "Mr. Daniel has 50 years of experience in automated high speed manufacturing line design, detailed engineering, capital requests, scheduling, and project management. IQ/OQ/PQ efforts were created, reviewed, authorized, and carried out by him. He leads plant automation activities. He has been a technical advisor and consulted in the manufacturing of robotic devices in industrial automation.",
         },
@@ -353,7 +353,8 @@ export default function TeamPage() {
         {
             name: "MANICKANTHAN C A",
             role: "Research & Robot Programmer",
-            image: "/images/Manibg.png",
+            image: "/images/team/mani.jpg",
+
             linkedin: "https://www.linkedin.com/in/manickanthan-c-a-b79a3b193/",
         },
         {
