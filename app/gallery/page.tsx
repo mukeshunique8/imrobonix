@@ -2,6 +2,7 @@
 import { GlowingLines, GridBackground, Particle } from '@/components/custom/Effects'
 import { GallerySection } from '@/components/custom/gallerySection'
 import { HeroImage } from '@/components/custom/HeroImage'
+import LightGallerySection from '@/components/custom/LightGallery'
 import React from 'react'
 // 🟣 Section 1
 const sectionOneData = {
@@ -76,13 +77,14 @@ export default function page() {
             </div>
             <div className="relative z-10  mx-auto ">
                 <HeroImage images={galleryImages} data={data} />
+                <LightGallerySection />
 
-                <div className="flex flex-col mb-[100px] gap-[100px]">
+                {/* <div className="flex flex-col mb-[100px] gap-[100px]">
                     <GallerySection data={sectionOneData} cards={sectionOneCards} />
                     <GallerySection data={sectionTwoData} cards={sectionTwoCards} />
                     <GallerySection data={sectionThreeData} cards={sectionThreeCards} />
                     <GallerySection data={sectionFourData} cards={sectionFourCards} />
-                </div>
+                </div> */}
 
 
             </div>

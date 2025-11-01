@@ -255,15 +255,15 @@ export default function TeamPage() {
             role: "Chief Technology Officer & Co-Founder",
             image: "/images/iyybg.png",
             linkedin: "https://www.linkedin.com/in/iyyappan-madasamy-59374612b/",
-            description: `Mr. Iyyappan completed his Master's in Robotics and Artificial Intelligence from Warsaw University Europe, he had a deep desire and a vision to develop advanced robotic health care products at an affordable cost to benefit the society. He has more than ${calculateYearsOfExperience("2018")} years of experience and a self-paced rigorous Research and Development Engineer. His clear vision paved the way to set-up health based Robotic manufacturing company IMRobonix private limited in Tamil Nadu for making high-tech robotic systems with a wide application.`,
+            description: `Mr. Iyyappan completed his Master's in Robotics and Artificial Intelligence from Warsaw University Europe, he had a deep desire and a vision to develop advanced robotic health care products at an affordable cost to benefit the society. He has more than ${calculateYearsOfExperience("2018")} years of experience and a self-paced rigorous Research and Development Engineer. His clear vision paved the way to set-up health based Robotic manufacturing company IMrobonix private limited in Tamil Nadu for making high-tech robotic systems with a wide application.`,
             yrsExp: "2018"
         },
         {
             name: "MANICKANTHAN C A",
             role: "COO AND DIRECTOR",
-            image: "/images/team/mani.jpg",
+            image: "/images/team/manusuit.png",
             linkedin: "https://www.linkedin.com/in/manickanthan-c-a-b79a3b193/",
-            description: `Mr. Manickanthan has more than ${calculateYearsOfExperience("2019")} years of experience in Robotics and Automation Industry. He is a technical robot programmer and an Economist. He has experience in programming Bionic arm, industrial robots. Currently, He is serving as the Director of IMROBONIX. He has successfully completed a project based on 'The economic crisis due to constant climatic change' and was awarded as Young Scientist for his exemplary work.`,
+            description: `Mr. Manickanthan has more than ${calculateYearsOfExperience("2019")} years of experience in Robotics and Automation Industry. He is a technical robot programmer and an Economist. He has experience in programming Bionic arm, industrial robots. Currently, He is serving as the Director of IMrobonix. He has successfully completed a project based on 'The economic crisis due to constant climatic change' and was awarded as Young Scientist for his exemplary work.`,
             yrsExp: "2019"
 
         },
@@ -364,6 +364,12 @@ export default function TeamPage() {
             linkedin: "",
         },
         {
+            name: "Dr. Karthik Chandrasekaran",
+            role: "R & D Control System Engineer",
+            image: "/images/team/team1.jpg",
+            linkedin: "",
+        },
+        {
             name: "S. Vibushita",
             role: "Research Assistant",
             image: "/images/vibubg.png",
@@ -414,7 +420,7 @@ export default function TeamPage() {
                         transition={{ delay: 0.3 }}
                         className="text-xl text-muted-foreground mb-4"
                     >
-                        The Imrobonix Team
+                        The IMrobonix Team
                     </motion.p>
                 </div>
             </div>

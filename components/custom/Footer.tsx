@@ -35,7 +35,7 @@ import { GridBackground, ParticleBackground } from "./Effects";
 const footerConfig = {
     logo: {
         src: "/images/Logo.png",
-        alt: "Imrobonix Pvt Ltd",
+        alt: "IMrobonix Pvt Ltd",
     },
     quickLinks: ["Home", "About Us", "Products", "Team", "Achievements", "Gallery", "Contact"],
     contact: {
@@ -301,7 +301,7 @@ export default function Footerdemo() {
                     className="flex flex-col items-center justify-between gap-4 pt-8 text-center md:flex-row"
                 >
                     <p className="text-sm text-muted-foreground">
-                        © 2025 Imrobonix Pvt Ltd. All rights reserved.
+                        © 2025 IMrobonix Pvt Ltd. All rights reserved.
                     </p>
                     <nav className="flex gap-6 text-sm">
                         {footerConfig.policies.map((policy) => (
@@ -323,8 +323,8 @@ export default function Footerdemo() {
                 </motion.div>
             </div>
             <div className="absolute bottom-0 left-0 right-0 w-full flex items-center justify-center pointer-events-none">
-                <h1 className="text-center text-3xl md:text-5xl lg:text-[10rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-700/20 to-neutral-900/10 select-none">
-                    <span className="text-primary/20">IM</span><span className="text-secondary/20">robonix</span>
+                <h1 className="text-center text-3xl md:text-[6rem]  font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-700/10 to-neutral-900/10 select-none">
+                    <span className="text-primary/10">IM</span><span className="text-secondary/10">robonix</span>
                 </h1>
             </div>
 

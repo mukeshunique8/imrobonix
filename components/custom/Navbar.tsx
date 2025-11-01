@@ -17,7 +17,7 @@ import { usePathname } from "next/navigation"; // ✅ ADD THIS
 const navConfig = {
     logo: {
         src: "/images/Logo.png",
-        alt: "Imrobonix Pvt Ltd",
+        alt: "IMrobonix Pvt Ltd",
     },
     links: [
         { name: "Home", href: "/" },

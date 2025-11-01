@@ -243,7 +243,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={` ${michroma.variable} ${roboto.variable} ${poppins.variable} antialiased`}>
+      <body className={`  ${roboto.variable} ${poppins.variable} antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="light"

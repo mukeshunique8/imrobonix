@@ -69,33 +69,43 @@ const WhoWeAreSection = () => {
     return (
         <div className="relative py-20 bg-secondary/10">
             <div className="container mx-auto px-4 md:px-6 lg:px-8">
-                <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
                     {/* Image */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="relative"
+                        className="relative flex flex-col gap-4"
                     >
                         <motion.div
                             className="absolute inset-0 bg-primary/20 blur-3xl rounded-full"
-                            animate={{
-                                scale: [1, 1.1, 1],
-                                opacity: [0.3, 0.5, 0.3],
-                            }}
+                            animate={{ scale: [1, 1.1, 1], opacity: [0.3, 0.5, 0.3] }}
                             transition={{ duration: 4, repeat: Infinity }}
                         />
-                        <div className="relative rounded-2xl overflow-hidden border border-primary/20 shadow-2xl">
+
+                        {/* Top Image */}
+                        <div className="relative w-full aspect-[5/3] rounded-xl overflow-hidden border border-primary/20 shadow-2xl">
                             <Image
                                 src="/images/gallery/galleryhero.png"
-                                alt="Founder"
+                                alt="Gallery Image 1"
                                 width={600}
-                                height={700}
-                                className="w-full h-auto object-cover"
+                                height={360}
+                                className="w-full h-full object-cover"
                             />
-                            <div className="absolute inset-0 bg-linear-to-br from-primary/10 via-transparent to-primary/10" />
+                        </div>
+
+                        {/* Bottom Image */}
+                        <div className="relative w-full aspect-[5/3] rounded-xl overflow-hidden border border-primary/20 shadow-2xl">
+                            <Image
+                                src="/images/team/manusuit.png"
+                                alt="Gallery Image 2"
+                                width={600}
+                                height={360}
+                                className="w-full h-full object-cover object-top"
+                            />
                         </div>
                     </motion.div>
+
 
                     {/* Content */}
                     <motion.div
@@ -138,7 +148,7 @@ const WhoWeAreSection = () => {
                         </p>
 
                         <p className="text-lg text-muted-foreground leading-relaxed">
-                            In light of such a serious impediment in Health sector, <strong className="text-primary">ImRobonix</strong> was established by Mr. Iyyappan and other co-founders in 2021 to revolutionize Medical Robotics and embrace the healthcare world in a more sustainable way by inventing cost efficient and high precision medical Robots.
+                            In light of such a serious impediment in Health sector, <strong className="text-primary">IMrobonix</strong> was established by Mr. Iyyappan and other co-founders in 2021 to revolutionize Medical Robotics and embrace the healthcare world in a more sustainable way by inventing cost efficient and high precision medical Robots.
                         </p>
                     </motion.div>
                 </div>
