@@ -253,7 +253,7 @@ export default function TeamPage() {
         {
             name: "M. Iyyappan",
             role: "Chief Technology Officer & Co-Founder",
-            image: "/images/iyybg.png",
+            image: "/images/team/Iyyappan CTO.jpg",
             linkedin: "https://www.linkedin.com/in/iyyappan-madasamy-59374612b/",
             description: `Mr. Iyyappan completed his Master's in Robotics and Artificial Intelligence from Warsaw University Europe, he had a deep desire and a vision to develop advanced robotic health care products at an affordable cost to benefit the society. He has more than ${calculateYearsOfExperience("2018")} years of experience and a self-paced rigorous Research and Development Engineer. His clear vision paved the way to set-up health based Robotic manufacturing company IMrobonix private limited in Tamil Nadu for making high-tech robotic systems with a wide application.`,
             yrsExp: "2018"

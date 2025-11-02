@@ -5,6 +5,7 @@ import { motion } from 'framer-motion';
 import { Trophy, Sparkles, ChevronRight } from 'lucide-react';
 import { GridBackground, Particle, SectionParticles } from './Effects';
 import Image from 'next/image';
+import { TimelineDemo } from './TimelineAwards';
 interface Award {
     id: number;
     title: string;
@@ -541,9 +542,8 @@ const Awards = () => {
 
                 {/* Awards List */}
                 <div className="max-w-7xl mx-auto">
-                    {awardsData.map((award, index) => (
-                        <AwardCard key={award.id} award={award} index={index} />
-                    ))}
+                    <TimelineDemo />
+
                 </div>
 
                 <StatisticsSection />
