@@ -1,7 +1,6 @@
 "use client"
 import Awards from '@/components/custom/Awards'
 import { GlowingLines, GridBackground, Particle } from '@/components/custom/Effects'
-import { GallerySection } from '@/components/custom/gallerySection'
 import { HeroImage } from '@/components/custom/HeroImage'
 import React from 'react'
 
