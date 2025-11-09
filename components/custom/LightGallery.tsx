@@ -103,7 +103,7 @@ export default function LightGallerySection({
                                 src={item.thumb || item.src}
                                 alt={item.title || `Image ${index + 1}`}
                                 fill
-                                className="object-contain"
+                                className="object-cover"
                             />
                         </div>
                     </a>

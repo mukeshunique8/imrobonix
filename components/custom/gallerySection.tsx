@@ -3,9 +3,9 @@ import LightGallerySection from "./LightGallery";
 const eventGalleries = [
 
     {
-        title: "Foundation Fund By Tamil Nadu Government",
+        title: "Meetings with Chief Minister & IT Minister",
         description:
-            "A proud moment for Imrobonix as we received the Foundation Grant from the Tamil Nadu Government in recognition of our innovative contributions to robotics and aerospace technology. This support strengthens our mission to empower young engineers and accelerate the growth of indigenous tech innovation.",
+            "Honored to present our achievements before Tamil Nadu leaders — MK Stalin, Chief Minister, and Dr. P. Thiaga Rajan (PTR), Minister of IT. Their encouragement strengthened our mission for innovation.",
         galleryItems: [
             // Chief Minister images
             { src: "/images/gallery/cm/1.jpg", thumb: "/images/gallery/cm/1.jpg", title: "Meeting with CM MK Stalin", desc: "Showcasing our achievements." },
@@ -17,9 +17,10 @@ const eventGalleries = [
         ],
     },
     {
-        title: "Meetings with Chief Minister & IT Minister",
+        title: "Foundation Fund By Tamil Nadu Government",
         description:
-            "Honored to present our achievements before Tamil Nadu leaders — MK Stalin, Chief Minister, and Dr. P. Thiaga Rajan (PTR), Minister of IT. Their encouragement strengthened our mission for innovation.",
+            "A proud moment for Imrobonix as we received the Foundation Grant from the Tamil Nadu Government in recognition of our innovative contributions to robotics and aerospace technology. This support strengthens our mission to empower young engineers and accelerate the growth of indigenous tech innovation.",
+
         galleryItems: [
             {
                 src: "/images/gallery/fund/1.jpg",
@@ -60,7 +61,7 @@ const eventGalleries = [
             { src: "/images/gallery/tngss/3.jpg", thumb: "/images/gallery/tngss/3.jpg", title: "Product Demonstration", desc: "Live demonstration of automation systems." },
 
             { src: "/images/gallery/tngss/6.jpg", thumb: "/images/gallery/tngss/6.jpg", title: "Product Demonstration", desc: "Live demonstration of automation systems." },
-            { src: "/images/gallery/tngss/7.jpg", thumb: "/images/gallery/tngss/7.jpg", title: "Product Demonstration", desc: "Live demonstration of automation systems." },
+            // { src: "/images/gallery/tngss/7.jpg", thumb: "/images/gallery/tngss/7.jpg", title: "Product Demonstration", desc: "Live demonstration of automation systems." },
             { src: "/images/gallery/tngss/8.jpg", thumb: "/images/gallery/tngss/8.jpg", title: "Product Demonstration", desc: "Live demonstration of automation systems." },
 
             { src: "/images/gallery/tngss/9.jpg", thumb: "/images/gallery/tngss/9.jpg", title: "Product Demonstration", desc: "Live demonstration of automation systems." },
@@ -106,14 +107,13 @@ const eventGalleries = [
             "Discover the groundbreaking products developed at Imrobonix — from intelligent robotics and automation systems to AI-driven healthcare and educational solutions. Each product reflects our passion for innovation, precision engineering, and creating technology that makes a real-world impact.",
         galleryItems: [
             { src: "/images/gallery/products/1.jpg", thumb: "/images/gallery/products/1.jpg", title: "Surgikot", desc: "AI-powered robotic exoskeleton designed for medical and rehabilitation purposes." },
-
-            { src: "/images/gallery/products/3.jpg", thumb: "/images/gallery/products/3.jpg", title: "", desc: "AI-powered robotic exoskeleton designed for medical and rehabilitation purposes." },
+            { src: "/images/gallery/products/7.jpg", thumb: "/images/gallery/products/7.jpg", title: "", desc: "AI-powered robotic exoskeleton designed for medical and rehabilitation purposes." },
+            // { src: "/images/gallery/products/3.jpg", thumb: "/images/gallery/products/3.jpg", title: "", desc: "AI-powered robotic exoskeleton designed for medical and rehabilitation purposes." },
             { src: "/images/gallery/products/4.png", thumb: "/images/gallery/products/4.png", title: "", desc: "AI-powered robotic exoskeleton designed for medical and rehabilitation purposes." },
             { src: "/images/gallery/products/2.jpg", thumb: "/images/gallery/products/2.jpg", title: "Surgikot", desc: "AI-powered robotic exoskeleton designed for medical and rehabilitation purposes." },
-            { src: "/images/gallery/products/8.jpg", thumb: "/images/gallery/products/8.jpg", title: "", desc: "AI-powered robotic exoskeleton designed for medical and rehabilitation purposes." },
-            { src: "/images/gallery/products/5.jpg", thumb: "/images/gallery/products/5.jpg", title: "", desc: "AI-powered robotic exoskeleton designed for medical and rehabilitation purposes." },
-            { src: "/images/gallery/products/6.jpg", thumb: "/images/gallery/products/6.jpg", title: "", desc: "AI-powered robotic exoskeleton designed for medical and rehabilitation purposes." },
-            { src: "/images/gallery/products/7.jpg", thumb: "/images/gallery/products/7.jpg", title: "", desc: "AI-powered robotic exoskeleton designed for medical and rehabilitation purposes." },
+            // { src: "/images/gallery/products/8.jpg", thumb: "/images/gallery/products/8.jpg", title: "", desc: "AI-powered robotic exoskeleton designed for medical and rehabilitation purposes." },
+            // { src: "/images/gallery/products/5.jpg", thumb: "/images/gallery/products/5.jpg", title: "", desc: "AI-powered robotic exoskeleton designed for medical and rehabilitation purposes." },
+            // { src: "/images/gallery/products/6.jpg", thumb: "/images/gallery/products/6.jpg", title: "", desc: "AI-powered robotic exoskeleton designed for medical and rehabilitation purposes." },
 
         ],
 

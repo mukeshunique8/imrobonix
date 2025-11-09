@@ -25,7 +25,15 @@ export function HeroImage({ images, data }: { images: string[], data?: HeroData 
         }}
         className="z-50 flex flex-col justify-center items-center"
       >
-        <motion.p className="font-bold text-xl md:text-6xl text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 py-4">
+        <motion.p
+          className="
+    font-bold text-xl md:text-6xl text-center
+    bg-clip-text text-transparent
+    bg-gradient-to-b from-neutral-900 to-neutral-500
+    dark:from-neutral-50 dark:to-neutral-300
+    py-4
+  "
+        >
           {data?.title1} <br />  {data?.title2}
         </motion.p>
         {/* <button className="px-4 py-2 backdrop-blur-sm border bg-emerald-300/10 border-emerald-500/20 text-white mx-auto text-center rounded-full relative mt-4">

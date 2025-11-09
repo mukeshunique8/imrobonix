@@ -15,7 +15,10 @@ import {
     Award,
     Sparkles,
     Users,
-    Building2
+    Building2,
+    CheckCircle,
+    HeartPulse,
+    Cpu
 } from "lucide-react";
 import Image from "next/image";
 import { GridBackground, SectionParticles } from "@/components/custom/Effects";
@@ -69,7 +72,8 @@ const WhoWeAreSection = () => {
     return (
         <div className="relative py-20 bg-secondary/10">
             <div className="container mx-auto px-4 md:px-6 lg:px-8">
-                <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
+                {/* lg:grid-cols-2 gap-12 lg:gap-16  */}
+                <div className="grid items-start">
                     {/* Image */}
                     <motion.div
                         initial={{ opacity: 0, x: -30 }}
@@ -84,7 +88,7 @@ const WhoWeAreSection = () => {
                         />
 
                         {/* Top Image */}
-                        <div className="relative w-full aspect-[5/3] rounded-xl overflow-hidden border border-primary/20 shadow-2xl">
+                        {/* <div className="relative w-full aspect-[5/3] rounded-xl overflow-hidden border border-primary/20 shadow-2xl">
                             <Image
                                 src="/images/gallery/galleryhero.png"
                                 alt="Gallery Image 1"
@@ -92,10 +96,10 @@ const WhoWeAreSection = () => {
                                 height={360}
                                 className="w-full h-full object-cover"
                             />
-                        </div>
+                        </div> */}
 
                         {/* Bottom Image */}
-                        <div className="relative w-full aspect-[5/3] rounded-xl overflow-hidden border border-primary/20 shadow-2xl">
+                        {/* <div className="relative w-full aspect-[5/3] rounded-xl overflow-hidden border border-primary/20 shadow-2xl">
                             <Image
                                 src="/images/team/manusuit.png"
                                 alt="Gallery Image 2"
@@ -103,7 +107,7 @@ const WhoWeAreSection = () => {
                                 height={360}
                                 className="w-full h-full object-cover object-top"
                             />
-                        </div>
+                        </div> */}
                     </motion.div>
 
 
@@ -139,17 +143,29 @@ const WhoWeAreSection = () => {
                             </div>
                         </div>
 
-                        <p className="text-lg text-muted-foreground leading-relaxed">
-                            As the saying goes &quot;Every life matters&quot;, and &quot;There is no greater wealth in this world than good health&quot;. Life of each and every individual is an asset for their family and to the country. People rush towards doctors to save the life of their dear ones in case of any health issues.
-                        </p>
 
-                        <p className="text-lg text-muted-foreground leading-relaxed">
-                            Rapid development in medical robotics is a great relive to both the patients and the Doctors. However statistical record says that 1 in every 112,000 surgical procedures leads to an error which may even lead to life threatening consequences.
-                        </p>
+                        <div className="space-y-6">
+                            <div className="flex items-start gap-3">
+                                <CheckCircle className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                                <p className="text-lg text-muted-foreground leading-relaxed">
+                                    As the saying goes &quot;Every life matters&quot;, and &quot;There is no greater wealth in this world than good health&quot;. Life of each and every individual is an asset for their family and to the country. People rush towards doctors to save the life of their dear ones in case of any health issues.
+                                </p>
+                            </div>
 
-                        <p className="text-lg text-muted-foreground leading-relaxed">
-                            In light of such a serious impediment in Health sector, <strong className="text-primary">IMrobonix</strong> was established by Mr. Iyyappan and other co-founders in 2021 to revolutionize Medical Robotics and embrace the healthcare world in a more sustainable way by inventing cost efficient and high precision medical Robots.
-                        </p>
+                            <div className="flex items-start gap-3">
+                                <HeartPulse className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                                <p className="text-lg text-muted-foreground leading-relaxed">
+                                    Rapid development in medical robotics is a great relive to both the patients and the Doctors. However statistical record says that 1 in every 112,000 surgical procedures leads to an error which may even lead to life threatening consequences.
+                                </p>
+                            </div>
+
+                            <div className="flex items-start gap-3">
+                                <Cpu className="w-6 h-6 text-primary mt-1 flex-shrink-0" />
+                                <p className="text-lg text-muted-foreground leading-relaxed">
+                                    In light of such a serious impediment in Health sector, <strong className="text-primary">IMrobonix</strong> was established by Mr. Iyyappan and other co-founders in 2021 to revolutionize Medical Robotics and embrace the healthcare world in a more sustainable way by inventing cost efficient and high precision medical Robots.
+                                </p>
+                            </div>
+                        </div>
                     </motion.div>
                 </div>
             </div>
@@ -509,18 +525,18 @@ export default function AboutPage() {
                 title="Medical Research"
                 subtitle="Revolutionary Thumb-Controlled Surgical Robot"
                 description="Surgi-Kot, our revolutionary surgical robot, is the world's first thumb-controlled device. Designed to enhance surgical precision, it operates via a joystick-like thumb control, offering high accuracy and flexibility. Our team dedicated months to this project, aiming to reduce surgical errors and improve outcomes. Surgi-Kot's innovative design decreases surgeon difficulty and minimizes post-surgery complications, making it a groundbreaking advancement in robotic surgery."
-                image="/images/med.png"
+                image="/images/Surgi2.png"
                 icon={Heart}
                 reverse
             />
 
-            <ResearchSection
+            {/* <ResearchSection
                 title="Mechanical Research"
                 subtitle="Cheri-Bot's Human-Like Robotic Arm"
                 description="Whole world stops if we stop moving. Movement plays a salient role in everybody's life. Our team has worked under the project Cheri-bot which focuses on the robotic arm, highly focusing on the replica of human hand and behaviour. Our project focuses on helping people who are physically challenged with respect to arm and hand. Our primary aim is to make them feel absolutely normal in par with anybody else around by providing them with the robotic arm which is as similar as the human replication."
                 image="/images/mech.png"
                 icon={Settings}
-            />
+            /> */}
 
             <TestimonialsSection />
             <SupportedBySection />

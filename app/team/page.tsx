@@ -252,7 +252,7 @@ export default function TeamPage() {
     const boardOfDirectors = [
         {
             name: "M. Iyyappan",
-            role: "Chief Technology Officer & Co-Founder",
+            role: "CTO and Founder",
             image: "/images/team/Iyyappan CTO.jpg",
             linkedin: "https://www.linkedin.com/in/iyyappan-madasamy-59374612b/",
             description: `Mr. Iyyappan completed his Master's in Robotics and Artificial Intelligence from Warsaw University Europe, he had a deep desire and a vision to develop advanced robotic health care products at an affordable cost to benefit the society. He has more than ${calculateYearsOfExperience("2018")} years of experience and a self-paced rigorous Research and Development Engineer. His clear vision paved the way to set-up health based Robotic manufacturing company IMrobonix private limited in Tamil Nadu for making high-tech robotic systems with a wide application.`,
@@ -260,11 +260,20 @@ export default function TeamPage() {
         },
         {
             name: "MANICKANTHAN C A",
-            role: "COO AND DIRECTOR",
+            role: "COO & Co- founder",
             image: "/images/team/manusuit.png",
             linkedin: "https://www.linkedin.com/in/manickanthan-c-a-b79a3b193/",
             description: `Mr. Manickanthan has more than ${calculateYearsOfExperience("2019")} years of experience in Robotics and Automation Industry. He is a technical robot programmer and an Economist. He has experience in programming Bionic arm, industrial robots. Currently, He is serving as the Director of IMrobonix. He has successfully completed a project based on 'The economic crisis due to constant climatic change' and was awarded as Young Scientist for his exemplary work.`,
             yrsExp: "2019"
+
+        },
+        {
+            name: "NIVETHA",
+            role: "CEO",
+            image: "/images/team/nivetha.jpeg",
+            linkedin: "",
+            // description: `Mr. Manickanthan has more than ${calculateYearsOfExperience("2019")} years of experience in Robotics and Automation Industry. He is a technical robot programmer and an Economist. He has experience in programming Bionic arm, industrial robots. Currently, He is serving as the Director of IMrobonix. He has successfully completed a project based on 'The economic crisis due to constant climatic change' and was awarded as Young Scientist for his exemplary work.`,
+            // yrsExp: "2019"
 
         },
     ];
@@ -296,13 +305,13 @@ export default function TeamPage() {
             linkedin: "https://www.linkedin.com/in/palani-narayanan-1b06172b/",
             description: "Dr. Palani is a Urologist and has over 8 years of experience. He aims and hopes to expand the use of Minimally Invasive Surgery in resource-constrained settings. He is a well-known surgeon from Tenkasi who presented to us his perspective of difficulty with the then existing medical device to operate laparoscopy surgery. His and along with other surgeon's issue later became our source of initial idea, which led to the creation of our first product Surgi-Kot.",
         },
-        {
-            name: "Dr. R. Nandhakumar",
-            role: "MS Mch, Urologist",
-            image: "/images/Icon.png",
-            linkedin: "",
-            description: "Dr. NandhaKumar is a urologist with more than 8 years of experience. He is a medical Professor in KAPV Govt Medical College,Trichy. He is also an urologist Consultant at Apollo Hospitals, Trichy.",
-        },
+        // {
+        //     name: "Dr. R. Nandhakumar",
+        //     role: "MS Mch, Urologist",
+        //     image: "/images/Icon.png",
+        //     linkedin: "",
+        //     description: "Dr. NandhaKumar is a urologist with more than 8 years of experience. He is a medical Professor in KAPV Govt Medical College,Trichy. He is also an urologist Consultant at Apollo Hospitals, Trichy.",
+        // },
         {
             name: "Dr. N. Ganapathy",
             role: "MS, General Surgeon",
@@ -344,43 +353,49 @@ export default function TeamPage() {
     ];
 
     const rndTeam = [
-        {
-            name: "M. Iyyappan",
-            role: "R & D Robotics",
-            image: "/images/iyybg.png",
-            linkedin: "https://www.linkedin.com/in/iyyappan-madasamy-59374612b/",
-        },
-        {
-            name: "MANICKANTHAN C A",
-            role: "Research & Robot Programmer",
-            image: "/images/team/mani.jpg",
+        // {
+        //     name: "M. Iyyappan",
+        //     role: "R & D Robotics",
+        //     image: "/images/iyybg.png",
+        //     linkedin: "https://www.linkedin.com/in/iyyappan-madasamy-59374612b/",
+        // },
+        // {
+        //     name: "MANICKANTHAN C A",
+        //     role: "Research & Robot Programmer",
+        //     image: "/images/team/mani.jpg",
 
-            linkedin: "https://www.linkedin.com/in/manickanthan-c-a-b79a3b193/",
-        },
-        {
-            name: "Mr. Prem Prakash",
-            role: "R & D Control System Engineer",
-            image: "/images/prembg.png",
-            linkedin: "",
-        },
+        //     linkedin: "https://www.linkedin.com/in/manickanthan-c-a-b79a3b193/",
+        // },
+        // {
+        //     name: "Mr. Prem Prakash",
+        //     role: "R & D Control System Engineer",
+        //     image: "/images/prembg.png",
+        //     linkedin: "",
+        // },
         {
             name: "Dr. Karthik Chandrasekaran",
-            role: "R & D Control System Engineer",
+            role: "Technical advisor and mentor",
             image: "/images/team/team1.jpg",
             linkedin: "",
         },
         {
-            name: "S. Vibushita",
-            role: "Research Assistant",
-            image: "/images/vibubg.png",
-            linkedin: "https://www.linkedin.com/in/vibushita-srinivasan-1a6450203/",
+            name: "Abhishek Deevan ",
+            role: "Control system engineer",
+            image: "",
+            linkedin: "",
         },
-        {
-            name: "R. Aadhya",
-            role: "Research Assistant",
-            image: "/images/adhyabg.png",
-            linkedin: "https://www.linkedin.com/in/aadhya-sujani/",
-        },
+        // {
+        //     name: "S. Vibushita",
+        //     role: "Research Assistant",
+        //     image: "/images/vibubg.png",
+        //     linkedin: "https://www.linkedin.com/in/vibushita-srinivasan-1a6450203/",
+        // },
+        // {
+        //     name: "R. Aadhya",
+        //     role: "Research Assistant",
+        //     image: "/images/adhyabg.png",
+        //     linkedin: "https://www.linkedin.com/in/aadhya-sujani/",
+        // },
     ];
 
     return (

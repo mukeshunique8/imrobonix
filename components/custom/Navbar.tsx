@@ -32,12 +32,12 @@ const navConfig = {
                     href: "/products",
                     image: "/images/Surgi2.png",
                 },
-                {
-                    title: "CheriBot",
-                    description: "AI VISION REPLICATING EXACT HUMAN HAND WITH 15 DEGREES OF FREEDOM",
-                    href: "/products",
-                    image: "/images/Cheribot.png",
-                },
+                // {
+                //     title: "CheriBot",
+                //     description: "AI VISION REPLICATING EXACT HUMAN HAND WITH 15 DEGREES OF FREEDOM",
+                //     href: "/products",
+                //     image: "/images/Cheribot.png",
+                // },
             ],
         },
         { name: "Team", href: "/team" },
@@ -57,13 +57,13 @@ const ProductDropdown = ({ items, isOpen }: { items: any[]; isOpen: boolean }) =
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 10, scale: 0.95 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute left-1/2 -translate-x-1/2 mt-2 w-[600px] max-w-[90vw] z-[100]"
+                    className="absolute left-1/2 -translate-x-1/2 mt-2 w-[300px] z-[100]"
                     style={{ top: "100%" }}
                 >
                     <div className="bg-background/95 backdrop-blur-xl border border-primary/20 rounded-2xl shadow-2xl overflow-hidden">
                         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent pointer-events-none" />
 
-                        <div className="relative grid grid-cols-2 gap-4 p-6">
+                        <div className="relative grid gap-4 p-6">
                             {items.map((item, idx) => (
                                 <Link key={item.title} href={item.href}> {/* ✅ CHANGED */}
                                     <motion.div

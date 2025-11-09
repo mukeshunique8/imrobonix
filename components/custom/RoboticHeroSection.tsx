@@ -97,8 +97,9 @@ export default function RoboticHeroSection() {
 
             {/* Animated Backgrounds */}
             {!isFullscreen && <>
-                <GridBackground />
-                <SectionParticles /></>}
+                {/* <GridBackground /> */}
+                {/* <SectionParticles /> */}
+            </>}
 
             {/* Glowing top border */}
             <motion.div
@@ -140,7 +141,7 @@ export default function RoboticHeroSection() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="text-3xl sm:text-4xl md:text-6xl font-bold mb-4 md:mb-6 leading-tight"
+                        className="text-3xl sm:text-4xl  font-bold mb-4 md:mb-6 leading-tight"
                     >
                         <span className="block mb-2">
                             <motion.span

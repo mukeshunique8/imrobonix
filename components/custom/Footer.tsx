@@ -37,7 +37,15 @@ const footerConfig = {
         src: "/images/Logo.png",
         alt: "IMrobonix Pvt Ltd",
     },
-    quickLinks: ["Home", "About Us", "Products", "Team", "Achievements", "Gallery", "Contact"],
+    quickLinks: [
+        { label: "About Us", href: "/about" },
+        { label: "Products", href: "/products" },
+        { label: "Team", href: "/team" },
+        { label: "Achievements", href: "/achievements" },
+        { label: "Gallery", href: "/gallery" },
+        { label: "Contact", href: "/contact" },
+    ],
+
     contact: {
         address: ["Anna University, Sir C V Raman Science Block 3rd, Campus, Guindy, Chennai, Tamil Nadu 600025"],
         phone: "+91 72000 61904",
@@ -167,8 +175,8 @@ export default function Footerdemo() {
                         <nav className="space-y-3 text-sm">
                             {footerConfig.quickLinks.map((link, idx) => (
                                 <motion.a
-                                    key={link}
-                                    href="#"
+                                    key={link.label}
+                                    href={link.href}
                                     className="group flex items-center gap-2 transition-colors hover:text-primary"
                                     whileHover={{ x: 5 }}
                                     initial={{ opacity: 0, x: -10 }}
@@ -178,7 +186,7 @@ export default function Footerdemo() {
                                 >
                                     <ChevronRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
                                     <span className="relative">
-                                        {link}
+                                        {link.label}
                                         <motion.span
                                             className="absolute bottom-0 left-0 w-0 h-[1px] bg-primary"
                                             whileHover={{ width: "100%" }}
@@ -187,6 +195,7 @@ export default function Footerdemo() {
                                     </span>
                                 </motion.a>
                             ))}
+
                         </nav>
                     </motion.div>
 
@@ -323,7 +332,7 @@ export default function Footerdemo() {
                 </motion.div>
             </div>
             <div className="absolute bottom-0 left-0 right-0 w-full flex items-center justify-center pointer-events-none">
-                <h1 className="text-center text-3xl md:text-[6rem]  font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-700/10 to-neutral-900/10 select-none">
+                <h1 className="text-center text-3xl md:text-[3rem]  font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-700/10 to-neutral-900/10 select-none">
                     <span className="text-primary/10">IM</span><span className="text-secondary/10">robonix</span>
                 </h1>
             </div>

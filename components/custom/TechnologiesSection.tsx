@@ -24,21 +24,21 @@ const products = [
         ],
         gradient: "from-blue-500/20 to-cyan-500/20",
     },
-    {
-        name: "CheriBot",
-        type: "Bionic Upper Limb",
-        path: "/images/Cheribot.png",
-        icon: Activity,
-        description:
-            "Smart robotic bionic upper limb with high grasping capability, allowing amputees to mimic natural human hand movements seamlessly.",
-        features: [
-            "15 degrees of freedom",
-            "Camera vision adaptation",
-            "Contour-adaptive control",
-            "Natural movement mimicry",
-        ],
-        gradient: "from-purple-500/20 to-pink-500/20",
-    },
+    // {
+    //     name: "CheriBot",
+    //     type: "Bionic Upper Limb",
+    //     path: "/images/Cheribot.png",
+    //     icon: Activity,
+    //     description:
+    //         "Smart robotic bionic upper limb with high grasping capability, allowing amputees to mimic natural human hand movements seamlessly.",
+    //     features: [
+    //         "15 degrees of freedom",
+    //         "Camera vision adaptation",
+    //         "Contour-adaptive control",
+    //         "Natural movement mimicry",
+    //     ],
+    //     gradient: "from-purple-500/20 to-pink-500/20",
+    // },
 ];
 
 

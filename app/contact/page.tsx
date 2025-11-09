@@ -290,13 +290,13 @@ const ContactPage = () => {
                 {/* Form and Animation Section */}
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
                     {/* Lottie Animation Placeholder */}
-                    <motion.div
+                    {/* <motion.div
                         initial={{ opacity: 0, x: 20 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ delay: 0.4 }}
                         className="flex justify-center items-center h-full w-full"
                     >
-                        {/* Replace this div with your Lottie component later */}
+                       
                         <div className="w-full relative  h-full   flex items-center justify-center">
                             <Lottie
                                 animationData={animationData}
@@ -305,6 +305,23 @@ const ContactPage = () => {
                                 className="absolute inset-0 w-full h-full object-cover"
                             />
                         </div>
+                    </motion.div> */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.5 }}
+                        className="relative w-full order-2 rounded-2xl overflow-hidden border border-primary/20 shadow-xl"
+                    >
+                        <iframe
+                            src={contactData.map.embedUrl}
+                            width="100%"
+                            height="500"
+                            style={{ border: 0 }}
+                            allowFullScreen
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                            className="w-full  order-1 h-[400px] md:h-[500px]"
+                        />
                     </motion.div>
                     {/* Form */}
                     <div>
@@ -331,25 +348,9 @@ const ContactPage = () => {
                 </div>
 
                 {/* Full-Width Map Section */}
-                <section className="mt-12">
-                    <motion.div
-                        initial={{ opacity: 0, y: 30 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: 0.5 }}
-                        className="relative w-full rounded-2xl overflow-hidden border border-primary/20 shadow-xl"
-                    >
-                        <iframe
-                            src={contactData.map.embedUrl}
-                            width="100%"
-                            height="500"
-                            style={{ border: 0 }}
-                            allowFullScreen
-                            loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"
-                            className="w-full h-[400px] md:h-[500px]"
-                        />
-                    </motion.div>
-                </section>
+                {/* <section className="mt-12">
+                  
+                </section> */}
 
             </div>
         </div>

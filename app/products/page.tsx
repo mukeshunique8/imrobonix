@@ -524,16 +524,16 @@ export default function ProductsPage() {
             />
 
             {/* Divider */}
-            <div className="relative py-16">
+            {/* <div className="relative py-16">
                 <motion.div
                     className="absolute top-1/2 left-0 right-0 h-[2px] bg-linear-to-r from-transparent via-primary/30 to-transparent"
                     animate={{ opacity: [0.3, 0.8, 0.3] }}
                     transition={{ duration: 3, repeat: Infinity }}
                 />
-            </div>
+            </div> */}
 
             {/* CheriBot Section */}
-            <ProductHero {...cheriBotData} />
+            {/* <ProductHero {...cheriBotData} />
             <FeaturesSection
                 title="Features of CheriBot"
                 features={cheriBotData.features}
@@ -546,7 +546,7 @@ export default function ProductsPage() {
             <ImpactSection
                 title="Impacts of CheriBot"
                 impacts={cheriBotData.impacts}
-            />
+            /> */}
         </div>
     );
 }
