@@ -252,7 +252,7 @@ export default function TeamPage() {
     const boardOfDirectors = [
         {
             name: "M. Iyyappan",
-            role: "CTO and Founder",
+            role: "CTO & Founder",
             image: "/images/team/Iyyappan CTO.jpg",
             linkedin: "https://www.linkedin.com/in/iyyappan-madasamy-59374612b/",
             description: `Mr. Iyyappan completed his Master's in Robotics and Artificial Intelligence from Warsaw University Europe, he had a deep desire and a vision to develop advanced robotic health care products at an affordable cost to benefit the society. He has more than ${calculateYearsOfExperience("2018")} years of experience and a self-paced rigorous Research and Development Engineer. His clear vision paved the way to set-up health based Robotic manufacturing company IMrobonix private limited in Tamil Nadu for making high-tech robotic systems with a wide application.`,
@@ -449,13 +449,26 @@ export default function TeamPage() {
                 title="Board Of Directors"
                 icon={Briefcase}
             />
-            {boardOfDirectors.map((member, idx) => (
+            {/* {boardOfDirectors.map((member, idx) => (
                 <LargeProfileCard
                     key={member.name}
                     member={member}
                     reverse={idx % 2 !== 0}
                 />
-            ))}
+            ))} */}
+            <div className="relative py-12">
+                <div className="container mx-auto px-4 md:px-6 lg:px-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {boardOfDirectors.map((member, idx) => (
+                            <SmallProfileCard
+                                key={member.name}
+                                member={member}
+                                index={idx}
+                            />
+                        ))}
+                    </div>
+                </div>
+            </div>
 
             {/* Medical Advisors */}
             <SectionHeader
@@ -463,27 +476,52 @@ export default function TeamPage() {
                 title="Medical Advisors"
                 icon={Stethoscope}
             />
-            {medicalAdvisors.map((member, idx) => (
+            {/* {medicalAdvisors.map((member, idx) => (
                 <LargeProfileCard
                     key={member.name}
                     member={member}
                     reverse={idx % 2 !== 0}
                 />
-            ))}
-
+            ))} */}
+            <div className="relative py-12">
+                <div className="container mx-auto px-4 md:px-6 lg:px-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {medicalAdvisors.map((member, idx) => (
+                            <SmallProfileCard
+                                key={member.name}
+                                member={member}
+                                index={idx}
+                            />
+                        ))}
+                    </div>
+                </div>
+            </div>
             {/* Medical Team */}
             <SectionHeader
                 id="medical-team"
                 title="Medical Team"
                 icon={Award}
             />
-            {medicalTeam.map((member, idx) => (
+            {/* {medicalTeam.map((member, idx) => (
                 <LargeProfileCard
                     key={member.name}
                     member={member}
                     reverse={idx % 2 !== 0}
                 />
-            ))}
+            ))} */}
+            <div className="relative py-12">
+                <div className="container mx-auto px-4 md:px-6 lg:px-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {medicalTeam.map((member, idx) => (
+                            <SmallProfileCard
+                                key={member.name}
+                                member={member}
+                                index={idx}
+                            />
+                        ))}
+                    </div>
+                </div>
+            </div>
 
             {/* Technical Advisors */}
             <SectionHeader
@@ -491,13 +529,27 @@ export default function TeamPage() {
                 title="Technical Advisors"
                 icon={Settings}
             />
-            {technicalAdvisors.map((member, idx) => (
+            {/* {technicalAdvisors.map((member, idx) => (
                 <LargeProfileCard
                     key={member.name}
                     member={member}
                     reverse={idx % 2 !== 0}
                 />
-            ))}
+            ))} */}
+            <div className="relative py-12">
+                <div className="container mx-auto px-4 md:px-6 lg:px-8">
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {technicalAdvisors.map((member, idx) => (
+                            <SmallProfileCard
+                                key={member.name}
+                                member={member}
+                                index={idx}
+                            />
+                        ))}
+                    </div>
+                </div>
+            </div>
+
 
             {/* R&D Team */}
             <SectionHeader

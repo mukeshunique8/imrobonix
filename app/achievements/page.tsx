@@ -1,4 +1,5 @@
 "use client"
+import AcheivementsTimeline from '@/components/custom/AcheivementsTimeline'
 import Awards from '@/components/custom/Awards'
 import { GlowingLines, GridBackground, Particle } from '@/components/custom/Effects'
 import { HeroImage } from '@/components/custom/HeroImage'
@@ -22,6 +23,7 @@ export default function page() {
             </div>
             <div className="relative z-10  mx-auto ">
                 <HeroImage images={heroImages} />
+                <AcheivementsTimeline />
                 <Awards />
 
             </div>
