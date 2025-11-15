@@ -251,6 +251,15 @@ const SmallProfileCard = ({ member, index }: any) => {
 export default function TeamPage() {
     const boardOfDirectors = [
         {
+            name: "NIVETHA",
+            role: "CEO",
+            image: "/images/team/nivetha.jpeg",
+            linkedin: "https://www.linkedin.com/in/nivetha-kanagaraj-a6495bbb/",
+            // description: `Mr. Manickanthan has more than ${calculateYearsOfExperience("2019")} years of experience in Robotics and Automation Industry. He is a technical robot programmer and an Economist. He has experience in programming Bionic arm, industrial robots. Currently, He is serving as the Director of IMrobonix. He has successfully completed a project based on 'The economic crisis due to constant climatic change' and was awarded as Young Scientist for his exemplary work.`,
+            // yrsExp: "2019"
+
+        },
+        {
             name: "M. Iyyappan",
             role: "CTO & Founder",
             image: "/images/team/Iyyappan CTO.jpg",
@@ -267,15 +276,7 @@ export default function TeamPage() {
             yrsExp: "2019"
 
         },
-        {
-            name: "NIVETHA",
-            role: "CEO",
-            image: "/images/team/nivetha.jpeg",
-            linkedin: "",
-            // description: `Mr. Manickanthan has more than ${calculateYearsOfExperience("2019")} years of experience in Robotics and Automation Industry. He is a technical robot programmer and an Economist. He has experience in programming Bionic arm, industrial robots. Currently, He is serving as the Director of IMrobonix. He has successfully completed a project based on 'The economic crisis due to constant climatic change' and was awarded as Young Scientist for his exemplary work.`,
-            // yrsExp: "2019"
 
-        },
     ];
 
     const medicalAdvisors = [
@@ -305,6 +306,10 @@ export default function TeamPage() {
             linkedin: "https://www.linkedin.com/in/palani-narayanan-1b06172b/",
             description: "Dr. Palani is a Urologist and has over 8 years of experience. He aims and hopes to expand the use of Minimally Invasive Surgery in resource-constrained settings. He is a well-known surgeon from Tenkasi who presented to us his perspective of difficulty with the then existing medical device to operate laparoscopy surgery. His and along with other surgeon's issue later became our source of initial idea, which led to the creation of our first product Surgi-Kot.",
         },
+        {
+            name: "Dr. Prathula",
+            image: "/images/team/Prathula.jpg",
+        },
         // {
         //     name: "Dr. R. Nandhakumar",
         //     role: "MS Mch, Urologist",
@@ -322,20 +327,21 @@ export default function TeamPage() {
         {
             name: "Dr. Balasubramanian",
             role: "Medical Professor, ESIC Medical College & PGIMSR",
-            image: "/images/Balabg.png",
+            image: "/images/team/Balabg.png",
             linkedin: "",
             description: "Dr. Balasubramanian is a General & Minimal Access Surgeon with propitious attitude and work culture. He is curious about academic and teaching endeavours. He received a Fellowship and appropriate training in minimal access surgery at Madras Medical College. Surgery including gastroenterology and minimal access are his areas of focus.",
         },
     ];
 
     const technicalAdvisors = [
-        {
-            name: "Mr. Giridharan",
-            role: "Chief Technical Advisor",
-            image: "/images/Ganapathybg.png",
-            linkedin: "https://www.linkedin.com/in/giridharan-krishnamurthy-07416120/",
-            description: "Mr. Giridharan has more than 30 years of experience in robotics for industrial applications, automation and controls, product and system configuration and application. Specialist in machine vision and robotics. He implemented real-time SPC and machine vision for continuous process monitoring.",
-        },
+
+        // {
+        //     name: "Mr. Giridharan",
+        //     role: "Chief Technical Advisor",
+        //     image: "/images/team/giri.png",
+        //     linkedin: "https://www.linkedin.com/in/giridharan-krishnamurthy-07416120/",
+        //     description: "Mr. Giridharan has more than 30 years of experience in robotics for industrial applications, automation and controls, product and system configuration and application. Specialist in machine vision and robotics. He implemented real-time SPC and machine vision for continuous process monitoring.",
+        // },
         {
             name: "Mr. Daniel Christadoss",
             role: "Chief Medical Robot Expert",
@@ -349,6 +355,11 @@ export default function TeamPage() {
             image: "/images/Lakshmibg.png",
             linkedin: "https://www.linkedin.com/in/glpriya/",
             description: "Dr. G. Lakshmi Priya is currently working as an Assistant Professor Senior Grade in the Centre for Innovation and Product Development (CIPD) and School of Electronics Engineering (SENSE), VIT University, Chennai. She is specialized in Nanoscale Semiconductor Device Modeling during her research tenure. Her thirst for research lead to 20 SCI/Web of Science indexed publications. She has recently authored a book entitled as, 'Dielectric and Work Function Engineered Doping-Less Tunnel FET'. She is a Life Member of ISTE and Associate Member of IEI (AMIE).",
+        }, {
+            name: "Dr. Karthik Chandrasekaran",
+            role: "Technical advisor and mentor",
+            image: "/images/team/team1.jpg",
+            linkedin: "",
         },
     ];
 
@@ -372,12 +383,7 @@ export default function TeamPage() {
         //     image: "/images/prembg.png",
         //     linkedin: "",
         // },
-        {
-            name: "Dr. Karthik Chandrasekaran",
-            role: "Technical advisor and mentor",
-            image: "/images/team/team1.jpg",
-            linkedin: "",
-        },
+
         {
             name: "Abhishek Deevan ",
             role: "Control system engineer",

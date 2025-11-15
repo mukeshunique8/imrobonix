@@ -12,7 +12,7 @@ const products = [
     {
         name: "SurgiKot",
         type: "Handheld Surgical Robot",
-        path: "/images/Surgi2.png",
+        path: "/images/gallery/products/1.jpg",
         icon: Zap,
         description:
             "Lightweight, high-precision handheld smart medical robotic device designed for multifunctional surgical procedures with articulating end gripper.",

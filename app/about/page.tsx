@@ -525,7 +525,7 @@ export default function AboutPage() {
                 title="Medical Research"
                 subtitle="Revolutionary Thumb-Controlled Surgical Robot"
                 description="Surgi-Kot, our revolutionary surgical robot, is the world's first thumb-controlled device. Designed to enhance surgical precision, it operates via a joystick-like thumb control, offering high accuracy and flexibility. Our team dedicated months to this project, aiming to reduce surgical errors and improve outcomes. Surgi-Kot's innovative design decreases surgeon difficulty and minimizes post-surgery complications, making it a groundbreaking advancement in robotic surgery."
-                image="/images/Surgi2.png"
+                image="/images/gallery/products/4.png"
                 icon={Heart}
                 reverse
             />

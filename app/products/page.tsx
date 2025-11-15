@@ -509,11 +509,11 @@ export default function ProductsPage() {
 
             {/* SurgiKot Section */}
             <ProductHero {...surgiKotData} />
-            <FeaturesSection
+            {/* <FeaturesSection
                 title="Features of SurgiKot"
                 features={surgiKotData.features}
                 image="/images/Surgikot2.png"
-            />
+            /> */}
             <BestWorksSection
                 title="Best Works of SurgiKot"
                 works={surgiKotData.bestWorks}
