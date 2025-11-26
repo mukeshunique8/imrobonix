@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: "%s | Imrobonix",
   },
   description:
-    "Imrobonix pioneers precision medical robotics with India's first handheld robotic surgical device (SurgiKot) and AI-enabled bionic upper limb (CheriBot). Revolutionizing healthcare with cost-effective, high-precision robotic solutions.",
+    "IMrobonix pioneers precision medical robotics with India's first handheld robotic surgical device (SurgiKot) and AI-enabled bionic upper limb (CheriBot). Revolutionizing healthcare with cost-effective, high-precision robotic solutions.",
   keywords: [
     "medical robotics",
     "surgical robots",
